@@ -15,7 +15,12 @@ use Illuminate\Http\Request;
 
 Route::post('vs/login','CompareController@login');
 Route::get('vs/login','CompareController@room');
-Route::post('vs/send','CompareController@send');
-Route::get('vs/watch','CompareController@game');
+Route::post('vs/play','CompareController@send');
+Route::get('vs/play','CompareController@game');
 Route::get('vs/history','CompareController@record');
-Route::get('number','NumberController@play');
+
+Route::post('number','CodeController@play');
+Route::get('number','CodeController@start');
+
+Route::delete('vs/leave','CompareController@leave');
+Route::get('bulls','BullsController@start');

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9362798e-a8d0-43a1-b701-b747d15040fe" name="Default Changelist" comment="" />
+    <list default="true" id="9362798e-a8d0-43a1-b701-b747d15040fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BullsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CodeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/NumberRecord.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_20_074951_create_number_records_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Compare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Compare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompareController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NumberController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_20_034529_create_compares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_20_034529_create_compares_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +26,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -104,7 +120,12 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1TrbwqEVYL8Y47m4T8y9BBlpT6k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -141,11 +162,33 @@
       <updated>1574221402215</updated>
       <workItem from="1574221403883" duration="1181000" />
       <workItem from="1574222889165" duration="5448000" />
-      <workItem from="1574228639969" duration="2517000" />
+      <workItem from="1574228639969" duration="5587000" />
+      <workItem from="1574234652625" duration="478000" />
+      <workItem from="1574235642206" duration="679000" />
+      <workItem from="1574239705281" duration="791000" />
+      <workItem from="1574240846794" duration="688000" />
+      <workItem from="1574241592833" duration="4190000" />
+      <workItem from="1574300002365" duration="3457000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -13,14 +13,16 @@ class CompareController extends BaseController
     {
         try {
             $request->validate([
-                'name' => ['required', 'string','unique:compares'],
+                'name' => ['required', 'string', 'unique:compares'],
             ]);
             $users = Compare::where('isIn', 1)->get();
             $number = count($users->toArray());
+
             if ($number < 2) {
                 $create = Compare::create([
                     'name' => $request['name'],
                     'isIn' => 1,
+                    'isRecord' => 0,
                 ]);
                 if ($create) {
                     return response()->json("Enter the room.");
@@ -38,9 +40,8 @@ class CompareController extends BaseController
     public function room()
     {
         try {
-            $users = Compare::where('isIn', 1)->get();
-            $number = count($users->toArray());
-            return $this->sendResponse($number, 200);
+            $users = Compare::where('isIn', '!=', 0)->get();
+            return $this->sendResponse($users, 200);
 
         } catch (Exception $error) {
             return $this->sendError($error->getMessage(), 400);
@@ -68,48 +69,57 @@ class CompareController extends BaseController
         }
     }
 
-    public function game(Request $request)
+    public function game()
     {
         try {
-
-            $a_answer = Compare::where('id', 1)->get()->first()->answer;
-            $b_answer = Compare::where('id', 2)->get()->first()->answer;
-            if (($a_answer !==null) && ($b_answer!==null)) {
-                if ($a_answer > $b_answer) {
-                    DB::table('compares')->truncate();
-                    $result['winner'] = Compare::where('id', 1)->get()->first()->name;
-                } else if ($a_answer < $b_answer) {
-                    $result['winner'] = Compare::where('id', 2)->get()->first()->name;
-                    DB::table('compares')->truncate();
-
-                } else{
-                    DB::table('compares')->truncate();
+            $players = Compare::where('answer', '!=', null)->get();
+            if (count($players) < 2) {
+                $result['winner'] = 'Not yet';
+                return $this->sendResponse($result, 200);
+            } else {
+                if ($players[0]["answer"] > $players[1]["answer"]) {
+                    $result['winner'] = $players[0]['name'];
+                } else if ($players[0]["answer"] < $players[1]["answer"]) {
+                    $result['winner'] = $players[1]['name'];
+                } else {
                     $result['winner'] = 'Nobody';
                 }
+            }
+            if (!$players[0]["isRecord"]) {
                 Record::create([
                     'winner' => $result['winner'],
                 ]);
-            }else{
-                $result['winner'] = 'Not ysss';
+                for($i=0;$i<2;$i++){
+                    $players[$i]->update([
+                        'isRecord' => 1,
+                    ]);
+                }
+
             }
 
-            $result['compares'] = Compare::all()->toArray();
+            $result['compares'] = $players;
             return $this->sendResponse($result, 200);
-
 
         } catch
         (Exception $error) {
             return $this->sendError($error->getMessage(), 400);
         }
     }
+
     public function record()
     {
         try {
-           $result = Record::all();
+            $result = Record::all();
             return $this->sendResponse($result, 200);
 
         } catch (Exception $error) {
             return $this->sendError($error->getMessage(), 400);
         }
+    }
+
+    public function leave()
+    {
+        DB::table('compares')->truncate();
+        return $this->sendResponse("Leave successfully", 200);
     }
 }

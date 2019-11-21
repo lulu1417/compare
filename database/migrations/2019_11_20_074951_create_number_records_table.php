@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComparesTable extends Migration
+class CreateNumberRecordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateComparesTable extends Migration
      */
     public function up()
     {
-        Schema::create('compares', function (Blueprint $table) {
+        Schema::create('number_records', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('answer')->nullable();
-            $table->integer('isIn');
-            $table->integer('isRecord');
+            $table->string('loser');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateComparesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compares');
+        Schema::dropIfExists('number_records');
     }
 }
