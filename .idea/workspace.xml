@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9362798e-a8d0-43a1-b701-b747d15040fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BullsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CodeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/NumberRecord.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_20_074951_create_number_records_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Bull.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_21_024739_create_bulls_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Compare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Compare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NumberController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_20_034529_create_compares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_20_034529_create_compares_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BullsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BullsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CodeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,7 +162,7 @@
       <workItem from="1574239705281" duration="791000" />
       <workItem from="1574240846794" duration="688000" />
       <workItem from="1574241592833" duration="4190000" />
-      <workItem from="1574300002365" duration="3457000" />
+      <workItem from="1574300002365" duration="9617000" />
     </task>
     <servers />
   </component>

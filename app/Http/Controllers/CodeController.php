@@ -11,7 +11,7 @@ class CodeController extends BaseController
 {
     public function start()
     {
-        $answer = mt_rand(1, 100);
+        $answer = mt_rand(1, 9);
         $create = Number::create([
             'name' => null,
             'min' => 1,
